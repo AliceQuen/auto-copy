@@ -1,0 +1,6 @@
+#!/usr/bin/expect -f
+set timeout -1
+spawn rsync -av --progress qinju@lxplus7.cern.ch:~/cernbox/jpsiPsi2S /home/storage0/users/junkaiqin/jpsiX3872_1/
+expect "*Password:"
+send "pp-X3872Jpsi-2mu4pi\n"
+expect eof
